@@ -11,3 +11,5 @@ package-lock.json
 node_modules
 styles/main.styl
 index.pug
+styles/variables.styl
+addtoGitIgnore.py
