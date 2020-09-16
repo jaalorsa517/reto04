@@ -50,6 +50,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: 0.5s;
 }
 .main-container .card-container .image-card img {
   width: 75%;
@@ -73,12 +75,24 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+.main-container .card-container .image-card .buttoms-container .left:hover {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: #babacf;
+  cursor: pointer;
+}
 .main-container .card-container .image-card .buttoms-container .rigth {
   width: 50px;
   height: 50px;
   background-image: url("../images/icon-next.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+.main-container .card-container .image-card .buttoms-container .rigth:hover {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #babacf;
+  cursor: pointer;
 }
 .main-container .card-container .description-card {
   display: flex;
@@ -105,7 +119,7 @@ body {
   font-weight: 200;
   color: #babacf;
 }
-.main-container .card-container.is-active {
+.main-container .card-container.hidden {
   display: none;
 }
 .attribution {
