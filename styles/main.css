@@ -4,6 +4,7 @@
   padding: 0;
   font-family: 'Inter', sans-serif;
   font-size: 32px;
+  color: #202046;
 }
 body {
   display: flex;
@@ -14,6 +15,8 @@ body {
   width: 100%;
   height: 100vh;
   flex-grow: 3;
+  display: flex;
+  flex-direction: column;
   position: relative;
   background-image: url("../images/pattern-bg.svg");
   background-size: 100% 100%;
@@ -22,7 +25,7 @@ body {
 }
 .main-container .curve {
   width: 100%;
-  height: 20%;
+  height: 10%;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -32,37 +35,86 @@ body {
   background-repeat: no-repeat;
 }
 .main-container .quotes {
-  width: 20%;
-  height: 20%;
+  width: 55px;
+  height: 50px;
   position: absolute;
-  left: 20%;
-  bottom: 25%;
+  left: 40%;
+  bottom: 40%;
   z-index: 2;
   background-image: url("../images/pattern-quotes.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+.main-container .card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .main-container .card-container .image-card img {
-  width: 60%;
-  height: 60%;
-  position: absolute;
-  z-index: 1;
+  width: 75%;
+  height: 70%;
+  position: relative;
+  left: 15%;
+  top: 10%;
+}
+.main-container .card-container .image-card .buttoms-container {
+  display: inline-flex;
+  position: relative;
+  left: 40%;
+  top: 0;
+  background-color: #fff;
+  border-radius: 25px;
+}
+.main-container .card-container .image-card .buttoms-container .left {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icon-prev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main-container .card-container .image-card .buttoms-container .rigth {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icon-next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .main-container .card-container .description-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   z-index: 3;
+}
+.main-container .card-container .description-card p {
+  margin: 25px;
+  font-size: 0.6rem;
+  font-weight: 300;
 }
 .main-container .card-container .description-card .author-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.main-container .card-container .description-card .author-container h4 {
+  font-size: 0.5rem;
+}
+.main-container .card-container .description-card .author-container span {
+  font-size: 0.5rem;
+  font-weight: 200;
+  color: #babacf;
+}
 .main-container .card-container.is-active {
   display: none;
+}
+.attribution {
+  margin: 0 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 0.6rem;
+}
+.attribution a {
+  font-size: 0.5rem;
+  color: #00f;
 }
